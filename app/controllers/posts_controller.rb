@@ -20,8 +20,9 @@ class PostsController < ApplicationController
       flash[:error] = "There was an error saving the post. Please try again."
       render :new
     end
-  end 
+  end
 
   def edit
+    @post = Post.find(params[:id])
   end
 end
