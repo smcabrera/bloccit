@@ -53,3 +53,7 @@ gem 'spring',        group: :development
 
 # Devise for authentication
 gem 'devise'
+
+# Figaro for storing credentials as environmental variables
+gem 'figaro'
+

@@ -1,0 +1,9 @@
+Usage: heroku config:get KEY
+
+ display a config value for an app
+
+Examples:
+
+ $ heroku config:get A
+ one
+
