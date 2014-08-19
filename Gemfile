@@ -11,6 +11,8 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'pry'
+  gem 'pry-rails'
 end
 
 # Use SCSS for stylesheets
@@ -56,4 +58,7 @@ gem 'devise'
 
 # Figaro for storing credentials as environmental variables
 gem 'figaro'
+
+# Makes it easier to authorize different users for different tasks
+gem 'pundit'
 

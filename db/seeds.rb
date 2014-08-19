@@ -15,13 +15,13 @@ require 'faker'
     password: Faker::Lorem.characters(10)
   )
   user.skip_confirmation!
-  user.save
+  user.save!
 end
 
 users = User.all
 
 50.times do
-  Post.create(
+  Post.create!(
     user: users.sample,
     title: Faker::Lorem.sentence,
     body:  Faker::Lorem.paragraph
@@ -31,17 +31,19 @@ posts = Post.all
 
 # Create Comments
 100.times do
-  Comment.create(
+  Comment.create!(
     # user: users.sample, # We're going to do this, but we haven't created a Users comment association yet
     post: posts.sample,
     body: Faker::Lorem.paragraph
   )
 end
 
-User.first.update_attributes(
-  email:    "stephen.m.cabrera@gmail.com",
-  password: "password"
-)
+me = User.first
+me.email = "stephen.m.cabrera@gmail.com"
+me.password = "password"
+me.skip_reconfirmation!
+me.save!
+ 
 
 puts "Seed finished"
 puts "#{User.count} users created"
