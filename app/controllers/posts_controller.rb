@@ -34,6 +34,14 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     authorize @post
     #todo: Need to go back through the More CRUD checkpoint and make sure that I've got this method squared away.
+    if @post.update_attributes(params.require(:post).permit(:title, :body))
+      #todo: Read about strong parameters and the above line of code a little more
+      flash[:notice] = "Post was updated."
+      redirect_to @post
+    else
+      flash[:error] = "There was an error saving the post. Please try again."
+      render :edit
+    end
   end
 
 end
