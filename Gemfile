@@ -57,7 +57,7 @@ gem 'spring',        group: :development
 gem 'devise'
 
 # Figaro for storing credentials as environmental variables
-gem 'figaro'
+gem 'figaro', '~> 1.0.0.rc1'
 
 # Makes it easier to authorize different users for different tasks
 gem 'pundit'
