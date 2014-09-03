@@ -1,0 +1,77 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddRoleToUsers	db/migrate/20140819015207_add_role_to_users.rb	/^class AddRoleToUsers < ActiveRecord::Migration$/;"	c
+AddTopicToPosts	db/migrate/20140823153823_add_topic_to_posts.rb	/^class AddTopicToPosts < ActiveRecord::Migration$/;"	c
+AddUserToPosts	db/migrate/20140811194457_add_user_to_posts.rb	/^class AddUserToPosts < ActiveRecord::Migration$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Bloccit
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+ApplicationPolicy	app/policies/application_policy.rb	/^class ApplicationPolicy$/;"	c
+Bloccit	config/application.rb	/^module Bloccit$/;"	m
+Comment	app/models/comment.rb	/^class Comment < ActiveRecord::Base$/;"	c
+CommentTest	test/models/comment_test.rb	/^class CommentTest < ActiveSupport::TestCase$/;"	c
+CreateComments	db/migrate/20140708171128_create_comments.rb	/^class CreateComments < ActiveRecord::Migration$/;"	c
+CreatePosts	db/migrate/20140708170345_create_posts.rb	/^class CreatePosts < ActiveRecord::Migration$/;"	c
+CreateTopics	db/migrate/20140823044838_create_topics.rb	/^class CreateTopics < ActiveRecord::Migration$/;"	c
+DeviseCreateUsers	db/migrate/20140718172312_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration$/;"	c
+Post	app/models/post.rb	/^class Post < ActiveRecord::Base$/;"	c
+PostPolicy	app/policies/post_policy.rb	/^class PostPolicy < ApplicationPolicy$/;"	c
+PostTest	test/models/post_test.rb	/^class PostTest < ActiveSupport::TestCase$/;"	c
+PostsController	app/controllers/posts_controller.rb	/^class PostsController < ApplicationController$/;"	c
+PostsControllerTest	test/controllers/posts_controller_test.rb	/^class PostsControllerTest < ActionController::TestCase$/;"	c
+PostsHelper	app/helpers/posts_helper.rb	/^module PostsHelper$/;"	m
+PostsHelperTest	test/helpers/posts_helper_test.rb	/^class PostsHelperTest < ActionView::TestCase$/;"	c
+Topic	app/models/topic.rb	/^class Topic < ActiveRecord::Base$/;"	c
+TopicPolicy	app/policies/topic_policy.rb	/^class TopicPolicy < ApplicationPolicy$/;"	c
+TopicTest	test/models/topic_test.rb	/^class TopicTest < ActiveSupport::TestCase$/;"	c
+TopicsController	app/controllers/topics_controller.rb	/^class TopicsController < ApplicationController$/;"	c
+TopicsControllerTest	test/controllers/topics_controller_test.rb	/^class TopicsControllerTest < ActionController::TestCase$/;"	c
+TopicsHelper	app/helpers/topics_helper.rb	/^module TopicsHelper$/;"	m
+TopicsHelperTest	test/helpers/topics_helper_test.rb	/^class TopicsHelperTest < ActionView::TestCase$/;"	c
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+UserTest	test/models/user_test.rb	/^class UserTest < ActiveSupport::TestCase$/;"	c
+WelcomeController	app/controllers/welcome_controller.rb	/^class WelcomeController < ApplicationController$/;"	c
+WelcomeControllerTest	test/controllers/welcome_controller_test.rb	/^class WelcomeControllerTest < ActionController::TestCase$/;"	c
+WelcomeHelper	app/helpers/welcome_helper.rb	/^module WelcomeHelper$/;"	m
+WelcomeHelperTest	test/helpers/welcome_helper_test.rb	/^class WelcomeHelperTest < ActionView::TestCase$/;"	c
+about	app/controllers/welcome_controller.rb	/^  def about$/;"	f	class:WelcomeController
+change	db/migrate/20140708170345_create_posts.rb	/^  def change$/;"	f	class:CreatePosts
+change	db/migrate/20140708171128_create_comments.rb	/^  def change$/;"	f	class:CreateComments
+change	db/migrate/20140718172312_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
+change	db/migrate/20140811194457_add_user_to_posts.rb	/^  def change$/;"	f	class:AddUserToPosts
+change	db/migrate/20140819015207_add_role_to_users.rb	/^  def change$/;"	f	class:AddRoleToUsers
+change	db/migrate/20140823044838_create_topics.rb	/^  def change$/;"	f	class:CreateTopics
+change	db/migrate/20140823153823_add_topic_to_posts.rb	/^  def change$/;"	f	class:AddTopicToPosts
+configure_permitted_paramaters	app/controllers/application_controller.rb	/^  def configure_permitted_paramaters$/;"	f	class:ApplicationController
+create	app/controllers/posts_controller.rb	/^  def create$/;"	f	class:PostsController
+create	app/controllers/topics_controller.rb	/^  def create$/;"	f	class:TopicsController
+create?	app/policies/application_policy.rb	/^  def create?$/;"	f	class:ApplicationPolicy
+create?	app/policies/topic_policy.rb	/^  def create?$/;"	f	class:TopicPolicy
+destroy?	app/policies/application_policy.rb	/^  def destroy?$/;"	f	class:ApplicationPolicy
+edit	app/controllers/posts_controller.rb	/^  def edit$/;"	f	class:PostsController
+edit	app/controllers/topics_controller.rb	/^  def edit$/;"	f	class:TopicsController
+edit?	app/policies/application_policy.rb	/^  def edit?$/;"	f	class:ApplicationPolicy
+index	app/controllers/topics_controller.rb	/^  def index$/;"	f	class:TopicsController
+index	app/controllers/welcome_controller.rb	/^  def index$/;"	f	class:WelcomeController
+index?	app/policies/application_policy.rb	/^  def index?$/;"	f	class:ApplicationPolicy
+index?	app/policies/post_policy.rb	/^   def index?$/;"	f	class:PostPolicy
+index?	app/policies/topic_policy.rb	/^  def index?$/;"	f	class:TopicPolicy
+initialize	app/policies/application_policy.rb	/^  def initialize(user, record)$/;"	f	class:ApplicationPolicy
+my_name	app/helpers/application_helper.rb	/^  def my_name$/;"	f	class:ApplicationHelper
+new	app/controllers/posts_controller.rb	/^  def new$/;"	f	class:PostsController
+new	app/controllers/topics_controller.rb	/^  def new$/;"	f	class:TopicsController
+new?	app/policies/application_policy.rb	/^  def new?$/;"	f	class:ApplicationPolicy
+role?	app/models/user.rb	/^  def role?(base_role)$/;"	f	class:User
+scope	app/policies/application_policy.rb	/^  def scope$/;"	f	class:ApplicationPolicy
+show	app/controllers/posts_controller.rb	/^  def show$/;"	f	class:PostsController
+show	app/controllers/topics_controller.rb	/^  def show$/;"	f	class:TopicsController
+show?	app/policies/application_policy.rb	/^  def show?$/;"	f	class:ApplicationPolicy
+update	app/controllers/posts_controller.rb	/^  def update$/;"	f	class:PostsController
+update	app/controllers/topics_controller.rb	/^  def update$/;"	f	class:TopicsController
+update?	app/policies/application_policy.rb	/^  def update?$/;"	f	class:ApplicationPolicy
+update?	app/policies/topic_policy.rb	/^  def update?$/;"	f	class:TopicPolicy
