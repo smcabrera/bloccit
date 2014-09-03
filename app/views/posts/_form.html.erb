@@ -1,5 +1,5 @@
 <%= form_for [topic, post] do |f|  %>
-<% if post.errors_any? %>
+<% if post.errors.any? %>
   <div class="alert alert-danger">
     <h4>There are <%= pluralize(post.errors.count, "error") %></h4>
     <ul>
@@ -10,12 +10,12 @@
   </div>
 <% end %>
 
-  <%= form_group_tag(post.errors.title) do %>
+  <%= form_group_tag(post.errors[:title]) do %>
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control', placeholder: "Enter post title" %>
   <% end %>
 
-  <%= form_group_tag(post.errors.title) do %>
+  <%= form_group_tag(post.errors) do %>
     <%= f.label :body %>
     <%= f.text_field :body, rows: 8, class: 'form-control', placeholder: "Enter post body" %>
   <% end %>
