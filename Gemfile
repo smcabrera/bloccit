@@ -62,3 +62,5 @@ gem 'figaro', '~> 1.0.0.rc1'
 # Makes it easier to authorize different users for different tasks
 gem 'pundit'
 
+# For markdown parsing
+gem 'redcarpet'
