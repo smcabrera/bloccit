@@ -64,3 +64,13 @@ gem 'pundit'
 
 # For markdown parsing
 gem 'redcarpet'
+
+# File uploads for rails
+gem 'carrierwave'
+
+# For images
+gem 'mini_magick'
+
+# For working with Amazon S3
+gem 'fog'
+
