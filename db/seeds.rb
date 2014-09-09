@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'faker'
 
-# Create Users
+#dCreate Users
 5.times do
   user = User.new(
     name:     Faker::Name.name,
@@ -30,12 +30,20 @@ end
 topics = Topic.all
 
 # Create Posts
-50.times do
+30.times do
   Post.create!(
     user:  users.sample,
     title: Faker::Lorem.sentence,
     body:  Faker::Lorem.paragraph,
     topic: topics.sample
+  )
+end
+20.times do
+  Post.create!(
+    user:  users.sample,
+    title: Faker::Lorem.sentence,
+    body:  Faker::Lorem.paragraph,
+    topic: Topic.first
   )
 end
 posts = Post.all
