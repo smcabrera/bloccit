@@ -17,6 +17,11 @@ group :development do
   gem 'better_errors'
 end
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use twitter bootstrap for easy styling
