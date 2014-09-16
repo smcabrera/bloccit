@@ -1,0 +1,6 @@
+<%= form_for [@topic, @post, @post.comments.build] do |f| %>
+  <%= f.label :body %>
+  <%= f.text_field :body, class: 'form-control', placeholder: "Your comment here" %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+
