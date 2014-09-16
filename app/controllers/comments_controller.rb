@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
     @topic = Topic.find(params[:topic_id])
     @post = Post.find(params[:post_id])
     @comment = current_user.comments.build(comment_params)
+    @comment.post_id = @post.id
 
     if @comment.save
       flash[:notice] = "Successfully added comment."
