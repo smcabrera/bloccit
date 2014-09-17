@@ -1,0 +1,5 @@
+<%= form_for [@topic, @post, @post.comments.build] do |f| %>
+  <%= f.text_field :body, class: 'form-control', placeholder: "New comment" %>
+  <%= f.submit class: 'btn' %>
+<% end %>
+
