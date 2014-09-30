@@ -11,13 +11,20 @@
     <% if @post.image? %>
        <%= image_tag( @post.image )  %>
      <% end %>
-  <%= render @comments %>
-  <%= render partial: 'comments/form', locals: { topic: @topic, post: @post} %>
+     <% @post.comments.each do |comment| %>
+       <%#todo: Not sure if the comment: comment below is neccessary or not...%>
+       <%= render partial: 'comments/comment', locals: { topic: @topic, post: @post, comment: comment} %>
+     <% end %>
+  <%= render partial: 'comments/form', locals: { topic: @topic, post: @post, comment: @comment} %>
   </div>
 
   <div class="col-md-4">
     <% if policy(@post).edit? %>
       <%= link_to "Edit", edit_topic_post_path(@topic, @post), class: 'btn btn-success' %>
+    <% end %>
+
+    <% if policy(@post).destroy? %>
+      <%= link_to "Delete", [@topic, @post], method: :delete, class: 'btn btn-danger', data: {confirm: "Are you sure you want to delete this post?"} %>
     <% end %>
   </div>
 </div>
