@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'faker'
 
-#dCreate Users
+#Create Users
 5.times do
   user = User.new(
     name:     Faker::Name.name,
@@ -38,20 +38,13 @@ topics = Topic.all
     topic: topics.sample
   )
 end
-20.times do
-  Post.create!(
-    user:  users.sample,
-    title: Faker::Lorem.sentence,
-    body:  Faker::Lorem.paragraph,
-    topic: Topic.first
-  )
-end
+
 posts = Post.all
 
 # Create Comments
 100.times do
   Comment.create!(
-    # user: users.sample, # We're going to do this, but we haven't created a Users comment association yet
+    user: users.sample,
     post: posts.sample,
     body: Faker::Lorem.paragraph
   )
@@ -62,7 +55,7 @@ me.name = "Stephen Mariano Cabrera"
 me.email = "stephen.m.cabrera@gmail.com"
 me.password = "password"
 me.skip_reconfirmation!
-me.save!
+me.save
 
 # Create different types of test users
 admin = User.new(
