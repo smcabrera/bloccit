@@ -39,4 +39,5 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
 
+  BetterErrors::Middleware.allow_ip! '190.114.248.74'
 end
