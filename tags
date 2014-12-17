@@ -5,6 +5,9 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddAvatarToUsers	db/migrate/20140906223521_add_avatar_to_users.rb	/^class AddAvatarToUsers < ActiveRecord::Migration$/;"	c
+AddCommentsToUser	db/migrate/20140916150728_add_comments_to_user.rb	/^class AddCommentsToUser < ActiveRecord::Migration$/;"	c
+AddImageToPosts	db/migrate/20140908234841_add_image_to_posts.rb	/^class AddImageToPosts < ActiveRecord::Migration$/;"	c
 AddRoleToUsers	db/migrate/20140819015207_add_role_to_users.rb	/^class AddRoleToUsers < ActiveRecord::Migration$/;"	c
 AddTopicToPosts	db/migrate/20140823153823_add_topic_to_posts.rb	/^class AddTopicToPosts < ActiveRecord::Migration$/;"	c
 AddUserToPosts	db/migrate/20140811194457_add_user_to_posts.rb	/^class AddUserToPosts < ActiveRecord::Migration$/;"	c
@@ -12,13 +15,20 @@ Application	config/application.rb	/^  class Application < Rails::Application$/;"
 ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
 ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
 ApplicationPolicy	app/policies/application_policy.rb	/^class ApplicationPolicy$/;"	c
+AvatarUploader	app/uploaders/avatar_uploader.rb	/^class AvatarUploader < CarrierWave::Uploader::Base$/;"	c
 Bloccit	config/application.rb	/^module Bloccit$/;"	m
 Comment	app/models/comment.rb	/^class Comment < ActiveRecord::Base$/;"	c
+CommentPolicy	app/policies/comment_policy.rb	/^class CommentPolicy < ApplicationPolicy$/;"	c
 CommentTest	test/models/comment_test.rb	/^class CommentTest < ActiveSupport::TestCase$/;"	c
+CommentsController	app/controllers/comments_controller.rb	/^class CommentsController < ApplicationController$/;"	c
+CommentsControllerTest	test/controllers/comments_controller_test.rb	/^class CommentsControllerTest < ActionController::TestCase$/;"	c
+CommentsHelper	app/helpers/comments_helper.rb	/^module CommentsHelper$/;"	m
+CommentsHelperTest	test/helpers/comments_helper_test.rb	/^class CommentsHelperTest < ActionView::TestCase$/;"	c
 CreateComments	db/migrate/20140708171128_create_comments.rb	/^class CreateComments < ActiveRecord::Migration$/;"	c
 CreatePosts	db/migrate/20140708170345_create_posts.rb	/^class CreatePosts < ActiveRecord::Migration$/;"	c
 CreateTopics	db/migrate/20140823044838_create_topics.rb	/^class CreateTopics < ActiveRecord::Migration$/;"	c
 DeviseCreateUsers	db/migrate/20140718172312_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration$/;"	c
+ImageUploader	app/uploaders/image_uploader.rb	/^class ImageUploader < CarrierWave::Uploader::Base$/;"	c
 Post	app/models/post.rb	/^class Post < ActiveRecord::Base$/;"	c
 PostPolicy	app/policies/post_policy.rb	/^class PostPolicy < ApplicationPolicy$/;"	c
 PostTest	test/models/post_test.rb	/^class PostTest < ActiveSupport::TestCase$/;"	c
@@ -35,6 +45,7 @@ TopicsHelper	app/helpers/topics_helper.rb	/^module TopicsHelper$/;"	m
 TopicsHelperTest	test/helpers/topics_helper_test.rb	/^class TopicsHelperTest < ActionView::TestCase$/;"	c
 User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
 UserTest	test/models/user_test.rb	/^class UserTest < ActiveSupport::TestCase$/;"	c
+UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
 WelcomeController	app/controllers/welcome_controller.rb	/^class WelcomeController < ApplicationController$/;"	c
 WelcomeControllerTest	test/controllers/welcome_controller_test.rb	/^class WelcomeControllerTest < ActionController::TestCase$/;"	c
 WelcomeHelper	app/helpers/welcome_helper.rb	/^module WelcomeHelper$/;"	m
@@ -47,31 +58,50 @@ change	db/migrate/20140811194457_add_user_to_posts.rb	/^  def change$/;"	f	class
 change	db/migrate/20140819015207_add_role_to_users.rb	/^  def change$/;"	f	class:AddRoleToUsers
 change	db/migrate/20140823044838_create_topics.rb	/^  def change$/;"	f	class:CreateTopics
 change	db/migrate/20140823153823_add_topic_to_posts.rb	/^  def change$/;"	f	class:AddTopicToPosts
+change	db/migrate/20140906223521_add_avatar_to_users.rb	/^  def change$/;"	f	class:AddAvatarToUsers
+change	db/migrate/20140908234841_add_image_to_posts.rb	/^  def change$/;"	f	class:AddImageToPosts
+change	db/migrate/20140916150728_add_comments_to_user.rb	/^  def change$/;"	f	class:AddCommentsToUser
+comment_params	app/controllers/comments_controller.rb	/^  def comment_params$/;"	f	class:CommentsController
 configure_permitted_paramaters	app/controllers/application_controller.rb	/^  def configure_permitted_paramaters$/;"	f	class:ApplicationController
+create	app/controllers/comments_controller.rb	/^  def create$/;"	f	class:CommentsController
 create	app/controllers/posts_controller.rb	/^  def create$/;"	f	class:PostsController
 create	app/controllers/topics_controller.rb	/^  def create$/;"	f	class:TopicsController
 create?	app/policies/application_policy.rb	/^  def create?$/;"	f	class:ApplicationPolicy
 create?	app/policies/topic_policy.rb	/^  def create?$/;"	f	class:TopicPolicy
+destroy	app/controllers/comments_controller.rb	/^  def destroy$/;"	f	class:CommentsController
+destroy	app/controllers/posts_controller.rb	/^  def destroy$/;"	f	class:PostsController
+destroy	app/controllers/topics_controller.rb	/^  def destroy$/;"	f	class:TopicsController
 destroy?	app/policies/application_policy.rb	/^  def destroy?$/;"	f	class:ApplicationPolicy
+destroy?	app/policies/comment_policy.rb	/^  def destroy?$/;"	f	class:CommentPolicy
+destroy?	app/policies/post_policy.rb	/^   def destroy?$/;"	f	class:PostPolicy
 edit	app/controllers/posts_controller.rb	/^  def edit$/;"	f	class:PostsController
 edit	app/controllers/topics_controller.rb	/^  def edit$/;"	f	class:TopicsController
 edit?	app/policies/application_policy.rb	/^  def edit?$/;"	f	class:ApplicationPolicy
+extension_white_list	app/uploaders/avatar_uploader.rb	/^  def extension_white_list$/;"	f	class:AvatarUploader
+extension_white_list	app/uploaders/image_uploader.rb	/^  def extension_white_list$/;"	f	class:ImageUploader
+form_group_tag	app/helpers/application_helper.rb	/^  def form_group_tag(errors, &block)$/;"	f	class:ApplicationHelper
 index	app/controllers/topics_controller.rb	/^  def index$/;"	f	class:TopicsController
 index	app/controllers/welcome_controller.rb	/^  def index$/;"	f	class:WelcomeController
 index?	app/policies/application_policy.rb	/^  def index?$/;"	f	class:ApplicationPolicy
 index?	app/policies/post_policy.rb	/^   def index?$/;"	f	class:PostPolicy
 index?	app/policies/topic_policy.rb	/^  def index?$/;"	f	class:TopicPolicy
 initialize	app/policies/application_policy.rb	/^  def initialize(user, record)$/;"	f	class:ApplicationPolicy
-my_name	app/helpers/application_helper.rb	/^  def my_name$/;"	f	class:ApplicationHelper
+markdown	app/helpers/application_helper.rb	/^  def markdown(text)$/;"	f	class:ApplicationHelper
 new	app/controllers/posts_controller.rb	/^  def new$/;"	f	class:PostsController
 new	app/controllers/topics_controller.rb	/^  def new$/;"	f	class:TopicsController
 new?	app/policies/application_policy.rb	/^  def new?$/;"	f	class:ApplicationPolicy
+post_params	app/controllers/posts_controller.rb	/^  def post_params$/;"	f	class:PostsController
 role?	app/models/user.rb	/^  def role?(base_role)$/;"	f	class:User
 scope	app/policies/application_policy.rb	/^  def scope$/;"	f	class:ApplicationPolicy
 show	app/controllers/posts_controller.rb	/^  def show$/;"	f	class:PostsController
 show	app/controllers/topics_controller.rb	/^  def show$/;"	f	class:TopicsController
 show?	app/policies/application_policy.rb	/^  def show?$/;"	f	class:ApplicationPolicy
+store_dir	app/uploaders/avatar_uploader.rb	/^  def store_dir$/;"	f	class:AvatarUploader
+store_dir	app/uploaders/image_uploader.rb	/^  def store_dir$/;"	f	class:ImageUploader
+topic_params	app/controllers/topics_controller.rb	/^  def topic_params$/;"	f	class:TopicsController
 update	app/controllers/posts_controller.rb	/^  def update$/;"	f	class:PostsController
 update	app/controllers/topics_controller.rb	/^  def update$/;"	f	class:TopicsController
+update	app/controllers/users_controller.rb	/^  def update$/;"	f	class:UsersController
 update?	app/policies/application_policy.rb	/^  def update?$/;"	f	class:ApplicationPolicy
 update?	app/policies/topic_policy.rb	/^  def update?$/;"	f	class:TopicPolicy
+user_params	app/controllers/users_controller.rb	/^  def user_params$/;"	f	class:UsersController
