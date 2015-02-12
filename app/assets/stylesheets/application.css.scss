@@ -1,4 +1,8 @@
+// Keep this order!
+@import "bootstrap-sprockets";
+@import "config"; // Overwrite bootstrap variables here!
 @import "bootstrap";
+// Place custom css depending on bootstrap variables here!
 
 .user-info {
   margin-top: 9px;
