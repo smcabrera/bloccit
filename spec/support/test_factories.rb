@@ -11,12 +11,20 @@ module TestFactories
 
   def authenticated_user(options={})
     user_options = {
-      :email => "email#{rand}@fake.com",
+      :email    => "email#{rand}@fake.com",
       :password => 'password'
     }.merge(options)
     user = User.new(user_options)
     user.skip_confirmation!
     user.save
     user
+  end
+
+  def associated_topic(options={})
+    topic_options = {
+      :name        => 'Topic Name',
+      :description => 'Description for this topic'
+    }.merge(options)
+    Topic.create(topic_options)
   end
 end
