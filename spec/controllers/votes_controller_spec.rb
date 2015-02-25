@@ -6,6 +6,8 @@ describe VotesController do
   include Devise::TestHelpers
 
   before do
+    # This line is here because the controller action says to go "back" when it's done
+    # but that would fail here. We don't care where it goes so we're just sending it to root.
     request.env["HTTP_REFERER"] = '/'
     @user = authenticated_user
     @post = associated_post
