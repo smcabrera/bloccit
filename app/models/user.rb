@@ -17,7 +17,13 @@ class User < ActiveRecord::Base
   def favorited(post)
     #My implementation--todo: question: why did they not use self here?
     #self.favorites.find_by_post_id(post.id)
+    #Is this because ruby classes get getter and setter methods by default?
+    #I always forget this point
     # Bloc.io implementation
     favorites.where(post_id: post.id).first
+  end
+
+  def voted(post)
+    self.votes.find_by_post_id(post.id)
   end
 end
