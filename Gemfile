@@ -83,5 +83,7 @@ gem 'fog'
 # For pagination
 gem 'will_paginate', '~> 3.0.5'
 
+# Have your tests run in the background whenever files are changed
+gem 'guard-rspec', require: false
 
 
