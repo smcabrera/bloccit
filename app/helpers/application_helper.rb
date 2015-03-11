@@ -13,4 +13,20 @@ module ApplicationHelper
     redcarpet = Redcarpet::Markdown.new(renderer, extensions)
     (redcarpet.render text).html_safe
   end
+
+  def up_vote_link_classes(post)
+    class_string = "glyphicon glyphicon-chevron-up"
+    if current_user.voted(post) && current_user.voted(post).up_vote?
+      class_string += ' voted'
+    end
+    class_string
+  end
+
+  def down_vote_link_classes(post)
+    class_string = "glyphicon glyphicon-chevron-down"
+    if current_user.voted(post) && current_user.voted(post).down_vote?
+      class_string += ' voted'
+    end
+    class_string
+  end
 end
