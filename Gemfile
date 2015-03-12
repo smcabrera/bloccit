@@ -14,6 +14,7 @@ group :development do
   gem 'jazz_fingers'
   gem 'binding_of_caller'
   gem 'better_errors'
+  gem 'meta_request'
 end
 
 group :test do
@@ -85,5 +86,4 @@ gem 'will_paginate', '~> 3.0.5'
 
 # Have your tests run in the background whenever files are changed
 gem 'guard-rspec', require: false
-
 
