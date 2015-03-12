@@ -9,6 +9,14 @@ module TestFactories
     Post.create(post_options)
   end
 
+  def associated_comment(options={})
+    comment_options = { body: "A comment" }.merge(options)
+    comment = Comment.new(comment_options)
+    allow(comment).to receive(:send_favorite_emails)
+    comment.save
+    comment
+  end
+
   def authenticated_user(options={})
     user_options = {
       :email => "email#{rand}@fake.com",
