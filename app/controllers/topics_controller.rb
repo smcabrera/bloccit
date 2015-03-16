@@ -11,8 +11,9 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find(params[:id])
-    @posts = @topic.posts.paginate(page: params[:page], per_page: 10)
-    authorize @topic
+    authorize @topic # We put this first so that we don't have to waste time loading topics for unauthorized users
+    #@posts = @topic.posts.paginate(page: params[:page], per_page: 10) # Non eager-loading
+    @posts = @topic.posts.includes(:user).includes(:comments).paginate(page: params[:page], per_page: 10) # Eager loading
   end
 
   def edit
