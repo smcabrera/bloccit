@@ -12,12 +12,13 @@ describe VotesController do
     @user = authenticated_user
     @post = associated_post
     sign_in @user
+    @topic = associated_topic
   end
 
   describe '#up_vote' do
     it 'Adds an up-vote to the post' do
       expect {
-        post( :up_vote, post_id: @post.id )
+        post( :up_vote, topic_id: @topic.id, post_id: @post.id )
       }.to change{ @post.up_votes }.by 1
     end
   end
@@ -25,7 +26,7 @@ describe VotesController do
   describe '#down_vote' do
     it 'Adds a down-vote to the post' do
       expect {
-        post( :down_vote, post_id: @post.id )
+        post( :down_vote, topic_id: @topic.id, post_id: @post.id )
       }.to change{ @post.down_votes }.by 1
     end
   end

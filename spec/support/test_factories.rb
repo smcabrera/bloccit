@@ -17,6 +17,15 @@ module TestFactories
     comment
   end
 
+  def associated_topic(options={})
+    topic_options = {
+      name: "A topic",
+      public: true,
+      description: 'Topic text',
+    }.merge(options)
+    Topic.create(topic_options)
+  end
+
   def authenticated_user(options={})
     user_options = {
       :email => "email#{rand}@fake.com",
