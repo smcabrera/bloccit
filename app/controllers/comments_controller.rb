@@ -19,14 +19,16 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
     authorize @comment
-    session[:return_to] ||= request.referer
 
     if @comment.destroy
       flash[:notice] = "Comment was removed."
-      redirect_to session.delete(:return_to)
     else
       flash[:error] = "There was a problem deleting this comment. Please try again."
-      redirect_to session.delete(:return_to)
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 
