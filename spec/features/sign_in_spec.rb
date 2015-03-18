@@ -2,11 +2,9 @@ require 'rails_helper'
 
 describe 'Sign in flow' do
 
-  include TestFactories
-
   describe 'successful' do
     it 'redirects to the topics index' do
-      user = authenticated_user
+      user = create(:user)
       visit root_path
 
 # the checkpoint suggests another html class but I used this because for some reason I hadn't written the one they used.

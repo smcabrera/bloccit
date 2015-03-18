@@ -2,17 +2,16 @@ require 'rails_helper'
 
 describe VotesController do
 
-  include TestFactories
   include Devise::TestHelpers
 
   before do
     # This line is here because the controller action says to go "back" when it's done
     # but that would fail here. We don't care where it goes so we're just sending it to root.
     request.env["HTTP_REFERER"] = '/'
-    @user = authenticated_user
-    @post = associated_post
+    @user = create(:user)
+    @post = create(:post)
     sign_in @user
-    @topic = associated_topic
+    @topic = create(:topic)
   end
 
   describe '#up_vote' do
