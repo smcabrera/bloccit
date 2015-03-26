@@ -11,7 +11,13 @@ end
 
 group :development do
   gem 'sqlite3'
-  gem 'jazz_fingers'
+  #gem 'jazz_fingers' # One of its dependencies is failing. I can just install the gems individually
+  gem 'pry', '~> 0.10.1'
+  gem 'pry-coolline', '~> 0.2.5'
+  gem 'pry-doc', '~> 0.6.0'
+  gem 'pry-git', '~> 0.2.3'
+  gem 'pry-rails', '~> 0.3.3'
+  gem 'pry-remote', '~> 0.1.8'
   gem 'binding_of_caller'
   gem 'better_errors'
   gem 'meta_request'
