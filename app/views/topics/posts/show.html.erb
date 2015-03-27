@@ -17,11 +17,13 @@
      <% end %>
 
      <% @post.comments.each do |comment| %>
-       <%#todo: Not sure if the comment: comment below is neccessary or not...%>
-       <%= render partial: 'comments/comment', locals: { topic: @topic, post: @post, comment: comment} %>
+       <div class="js-comments">
+         <%= render partial: 'comments/comment', locals: { topic: @topic, post: @post, comment: comment} %>
+       </div>
      <% end %>
-
-    <%= render partial: 'comments/form', locals: { topic: @topic, post: @post, comment: @comment} %>
+     <div class="new-comment">
+       <%= render partial: 'comments/form', locals: { topic: @topic, post: @post, comment: @comment} %>
+     </div>
   </div>
 
   <div class="col-md-4">
